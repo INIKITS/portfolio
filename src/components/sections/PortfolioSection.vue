@@ -5,9 +5,7 @@ const props = defineProps({
 });
 </script>
 <template>
-	<div class="flex items-center ">
-		<div>hejfikosamkfsmakfmsal</div>
-		<slot />
-		<!-- <i name="image" /> -->
+	<div class="[ flex items-center ]">
+		<div class="[ text-white ]">hejfikosamkfsmakfmsal</div>
 	</div>
 </template>

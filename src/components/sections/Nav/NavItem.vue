@@ -14,10 +14,10 @@ const props = defineProps({
 </script>
 
 <template>
-	<li>
+	<li data-element="nav-item">
 		<a
 			:href="url"
-			class="fill-white hover:fill-text-theme-secondary hover:animate-pulse transition-all duration-300"
+			class="[ fill-white hover:fill-text-theme-secondary hover:animate-pulse transition-all duration-300 ]"
 		>
 			<Icon :name="icon" width="24" />
 		</a>
