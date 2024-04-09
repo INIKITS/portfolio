@@ -1,14 +1,12 @@
 <script setup>
-import HomePage from './pages/HomePage.vue';
-import MainNav from './components/MainNav.vue';
+import HomePage from '@/pages/HomePage.vue'
+import MainNav from '@/components/sections/Nav/MainNav.vue';
 
 </script>
 
 <template>
   <MainNav /> 
   <main>
-    <!-- <div class="relative"> -->
       <HomePage />
-    <!-- </div> -->
   </main>
 </template>

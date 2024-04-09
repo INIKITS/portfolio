@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted, onUnmounted, ref, computed } from 'vue';
-import Icon from '../components/Icon.vue';
+import Icon from '@/components/Icon.vue'
 
 const scrollTop = ref(0);
 const solidNav = ref(false);
@@ -30,23 +30,29 @@ onUnmounted(() => {
 	>
 		<div
 			class="absolute h-px w-[44%] bg-white top-full left-1/2 transition-all duration-500"
-			:class="{ 'w-[66%]': solidNav }"
+			:class="{ 'w-[66%] bg-bg-theme-dark': solidNav }"
 		/>
 		<div
 			class="absolute h-px w-[44%] bg-white top-full right-1/2 transition-all duration-500"
-			:class="{ 'w-[66%]': solidNav }"
+			:class="{ 'w-[66%] bg-bg-theme-dark': solidNav }"
 		/>
 		<ul
 			class="flex gap-6 mr-24 transition-all duration-500"
 			:class="{ 'translate-x-full': solidNav }"
 		>
 			<li>
-				<a href="/" class="fill-white hover:fill-red-500">
+				<a
+					href="/"
+					class="fill-white hover:fill-text-theme-secondary hover:animate-pulse transition-all duration-300"
+				>
 					<Icon name="github" width="24" />
 				</a>
 			</li>
 			<li>
-				<a href="/" class="fill-white hover:fill-red-500">
+				<a
+					href="/"
+					class="fill-white hover:fill-text-theme-secondary hover:animate-pulse transition-all duration-300"
+				>
 					<Icon name="linkedin" width="24" />
 				</a>
 			</li>
