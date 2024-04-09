@@ -2,21 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-	@font-face {
-		font-family: 'kh';
-		src: url('../src/assets/fonts/kh.ttf') format('ttf');
-		font-weight: 400;
-		font-style: normal;
-	}
-}
-
-html,
-body,
-#app,
-main,
-canvas {
+body {
 	background-color: #000;
-	width: 100%;
-	height: 100%;
 }

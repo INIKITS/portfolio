@@ -4,9 +4,8 @@ import { ref, onMounted } from 'vue';
 const displayText = ['dakopa', 'dakooa', 'dakota. 🦅'];
 const typeValue = ref('');
 const typeStatus = ref(false);
-// inverse, lower number is faster
 const typingSpeed = ref(100);
-const erasingSpeed = 125;
+const erasingSpeed = 75;
 const newTextDelay = 1200;
 const displayTextArrayIndex = ref(0);
 const charIndex = ref(0);
@@ -57,7 +56,7 @@ onMounted(() => {
 </script>
 
 <template>
-	<div class="[ px-12 flex items-center justify-center gap-2 min-h-[100vh] ]">
+	<div data-element="hero-section" class="hero [ px-12 flex items-center justify-center gap-2 min-h-[100vh] ]">
 		<div class="relative text-3xl text-white leading-relaxed tracking-wide ]">
 			hello. i'm
 			<span class="text-bg-theme">{{ typeValue }}</span>
