@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-const displayText = ['dakopa', 'dakooa', 'dakota. 🦅'];
+const displayText = ['dakopa', 'dakoaa', 'dakota. 🦅'];
 const typeValue = ref('');
 const typeStatus = ref(false);
 const typingSpeed = ref(100);
@@ -56,11 +56,11 @@ onMounted(() => {
 </script>
 
 <template>
-	<div data-element="hero-section" class="hero [ px-12 flex items-center justify-center gap-2 min-h-[100vh] ]">
-		<div class="relative text-3xl text-white leading-relaxed tracking-wide ]">
+	<div data-element="hero-section" class="[ px-12 gap-2 min-h-[100vh] flex items-center justify-center ]">
+		<div class="[ relative text-3xl leading-relaxed tracking-wide text-white ]">
 			hello. i'm
-			<span class="text-bg-theme">{{ typeValue }}</span>
-			<span class="animate-pulse font-mono">|</span>
+			<span class="[ text-bg-theme ]">{{ typeValue }}</span>
+			<span class="[ animate-pulse font-mono ]">|</span>
 		</div>
 	</div>
 </template>

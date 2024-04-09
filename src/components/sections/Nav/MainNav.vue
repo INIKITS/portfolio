@@ -24,18 +24,26 @@ onUnmounted(() => {
 <template>
 	<nav
 		data-element="main-nav"
-		class="top-0 text-white flex justify-end pb-3 py-4 sticky transition-all duration-500 z-10"
+		class="
+			[ sticky top-0 z-10 flex justify-end pb-3 py-4 ]
+			[ text-white transition-all duration-500 ]
+		"
 		:class="{ 'bg-bg-theme-dark/80 ': solidNav }"
 	>
 		<NavDivider :solidNav="solidNav" />
 		<ul
-			class="flex gap-6 mr-24 transition-all duration-500"
+			data-element="nav-list"
+			class="
+				[ flex gap-6 mr-24 ]
+				[ transition-all duration-500 ]
+			"
 			:class="{ 'translate-x-full': solidNav }"
 		>
-			<NavItem icon="github" url="https://github.com/INIKITS" />
+			<NavItem icon="github" url="https://github.com/INIKITS" alt="Github" />
 			<NavItem
 				icon="linkedin"
 				url="https://www.linkedin.com/in/dakota-solis/"
+				alt="LinkedIn"
 			/>
 		</ul>
 	</nav>
