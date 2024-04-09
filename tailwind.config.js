@@ -13,7 +13,6 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Nanum Gothic Coding', 'sans-serif'],
-				kh: ['kh', 'sans-serif'],
 			},
 		},
 	},
