@@ -39,12 +39,12 @@ onUnmounted(() => {
 			"
 			:class="{ 'translate-x-full': solidNav }"
 		>
-			<NavItem icon="github" url="https://github.com/INIKITS" alt="Github" />
 			<NavItem
 				icon="linkedin"
 				url="https://www.linkedin.com/in/dakota-solis/"
 				alt="LinkedIn"
 			/>
+			<NavItem icon="github" url="https://github.com/INIKITS" alt="Github" />
 		</ul>
 	</nav>
 </template>

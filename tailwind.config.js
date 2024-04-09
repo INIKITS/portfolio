@@ -13,6 +13,7 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Nanum Gothic Coding', 'sans-serif'],
+				cabin: ['Cabin', 'sans-serif'],
 			},
 		},
 	},
