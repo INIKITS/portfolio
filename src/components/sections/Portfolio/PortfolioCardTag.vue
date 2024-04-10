@@ -5,10 +5,6 @@ const props = defineProps({
 		type: String,
 		required: true,
 	},
-	color: {
-		type: String,
-		default: 'black',
-	},
 });
 let styles = computed(() => {
 	switch (props.name) {
@@ -22,15 +18,17 @@ let styles = computed(() => {
 			return 'border-[#DD1A16] shadow-[#DD1A16]';
 		case 'TypeScript':
 			return 'border-[#3077C6] shadow-[#3077C6]';
+		case 'Rive':
+			return 'border-gradient-purple border-gradient shadow-[#d53a9d]';
 		default:
-			return 'border text-white';
+			return;
 	}
 });
 </script>
 
 <template>
 	<div
-		class="p-1 px-2 rounded-lg border text-[10px] tracking-wide text-white bg-black shadow-sm"
+		class="p-1 px-2  border text-[10px] tracking-wide text-white bg-black shadow-sm"
 		:class="styles"
 	>
 		{{ name }}

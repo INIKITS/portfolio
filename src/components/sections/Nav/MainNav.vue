@@ -25,7 +25,7 @@ onUnmounted(() => {
 	<nav
 		data-element="main-nav"
 		class="
-			[ sticky top-0 z-10 flex justify-end pb-3 py-4 ]
+			[ sticky top-0 z-30 flex justify-end pb-3 py-4 ]
 			[ text-white transition-all duration-500 ]
 		"
 		:class="{ 'bg-bg-theme-dark/80 ': solidNav }"
