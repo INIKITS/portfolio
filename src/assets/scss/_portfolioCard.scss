@@ -1,0 +1,34 @@
+.card {
+	.butterfly {
+		animation: fly 1.5s ease-in-out infinite;
+	}
+	.front-wing,
+	.back-wing {
+		animation: wing-flap .6s infinite;
+		transform-origin: bottom;
+	}
+
+	@keyframes wing-flap {
+		0% {
+			transform: rotateX(0deg);
+		}
+		50% {
+			transform: rotateX(15deg);
+		}
+		100% {
+			transform: rotateX(0deg);
+		}
+	}
+
+	@keyframes fly {
+		0% {
+			transform: translateY(0px);
+		}
+		50% {
+			transform: translateY(-4px);
+		}
+		100% {
+			transform: translateY(0px);
+		}
+	}
+}

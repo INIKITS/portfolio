@@ -1,6 +1,6 @@
 <script setup>
 import PortfolioCardTag from './PortfolioCardTag.vue';
-import Icon from '@/components/Icon.vue';
+import PortfolioCardAnimation from './PortfolioCardAnimation.vue';
 
 const props = defineProps({
 	project: {
@@ -11,7 +11,7 @@ const props = defineProps({
 </script>
 <template>
 	<div
-		class="[ relative flex-[0_0_306px] min-h-96 text-black flex flex-col bg-[#0f1010] mx-auto border-2 border-black hover:border-2 hover:border-bg-theme-dark shadow-bg-theme-dark group transition duration-200 overflow-hidden ]"
+		class="[ card relative flex-[0_0_306px] min-h-96 text-black flex flex-col bg-[#0f1010] mx-auto border-2 border-black hover:border-2 hover:border-bg-theme-dark shadow-bg-theme-dark group transition duration-200 overflow-hidden ]"
 	>
 		<a :href="project.url" aria-label="View project">
 			<img
@@ -21,11 +21,7 @@ const props = defineProps({
 			/>
 		</a>
 		<div class="relative p-4 flex flex-col justify-between">
-			<Icon
-				v-if="project.name === 'preducation'"
-				name="monster"
-				class="absolute top-4 group-hover:translate-x-[-54%] -right-[22%] transition duration-300 w-24 h-24 z-10"
-			/>
+			<PortfolioCardAnimation :project-name="project.name" />
 			<a
 				:href="project.url"
 				class="z-10 text-xl pb-4 first-letter:uppercase font-bold text-white tracking-widest font-cabin"
