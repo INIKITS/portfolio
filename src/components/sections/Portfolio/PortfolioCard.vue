@@ -35,8 +35,7 @@ const props = defineProps({
 			<div
 				class="text-white text-sm overflow-visible group-hover:bg-[#0f1010]/60 transition duration-200 z-0"
 			>
-				A marketing page for an app designed to help teachers and parents teach
-				children about the importance of diversity and inclusion.
+				{{ project.description }}
 			</div>
 		</div>
 	</div>
