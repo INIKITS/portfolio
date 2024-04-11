@@ -28,7 +28,7 @@ let styles = computed(() => {
 
 <template>
 	<div
-		class="p-1 px-2  border text-[10px] tracking-wide text-white bg-black shadow-sm"
+		class="p-1 px-2 z-10 border text-[10px] tracking-wide text-white bg-black shadow-sm"
 		:class="styles"
 	>
 		{{ name }}
