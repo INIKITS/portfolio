@@ -22,7 +22,7 @@ console.log('projectName :>> ', props.projectName);
 		v-if="projectName === 'preducation'"
 		name="butterfly"
 		aria-hidden="true"
-		class="absolute -bottom-4 group-hover:translate-x-[450%] -left-[22%] transition duration-1000 w-14 h-14 z-10"
+		class="absolute -bottom-4 group-hover:translate-x-[450%] -left-[22%] transition duration-500 w-14 h-14 z-10"
 	/>
 	<div v-if="projectName === 'clevyr'" class="stroke-[#FF5900]">
 		<Icon
