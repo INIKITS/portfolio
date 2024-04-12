@@ -22,7 +22,7 @@ console.log('projectName :>> ', props.projectName);
 		v-if="projectName === 'preducation'"
 		name="butterfly"
 		aria-hidden="true"
-		class="absolute -bottom-4 group-hover:translate-x-[450%] -left-[22%] transition duration-500 w-14 h-14 z-10"
+		class="absolute -bottom-2 group-hover:translate-x-[450%] -left-[22%] transition duration-500 w-14 h-14 z-10"
 	/>
 	<div v-if="projectName === 'clevyr'" class="stroke-[#FF5900]">
 		<Icon
@@ -38,7 +38,7 @@ console.log('projectName :>> ', props.projectName);
 		<Icon
 			name="docker"
 			aria-hidden="true"
-			class="w-3 h-3 absolute translate-y-[100vh] group-hover:-translate-y-full transition ease-in-out duration-150 bottom-[0%] left-[17%] blur-[2px]"
+			class="w-3 h-3 absolute translate-y-[100vh] group-hover:-translate-y-full transition ease-in-out duration-150 bottom-[44%] left-[17%] blur-[2px]"
 		/>
 		<Icon
 			name="binary"
@@ -48,7 +48,7 @@ console.log('projectName :>> ', props.projectName);
 		<Icon
 			name="javascript"
 			aria-hidden="true"
-			class="w-2 h-2 absolute translate-y-[100vh] group-hover:-translate-y-full transition ease-in-out duration-100 bottom-[10%] left-[45%] blur-[0px]"
+			class="w-2 h-2 absolute translate-y-[100vh] group-hover:-translate-y-full transition ease-in-out duration-100 bottom-[44%] left-[45%] blur-[1px]"
 		/>
 		<Icon
 			name="vue"
@@ -78,7 +78,7 @@ console.log('projectName :>> ', props.projectName);
 		<Icon
 			name="docker"
 			aria-hidden="true"
-			class="w-3 h-3 absolute translate-y-[100vh] group-hover:-translate-y-full transition ease-in-out duration-150 bottom-[0%] left-[65%] blur-[0px]"
+			class="w-3 h-3 absolute translate-y-[100vh] group-hover:-translate-y-full transition ease-in-out duration-150 bottom-[33%] left-[65%] blur-[0px]"
 		/>
 		<Icon
 			name="javascript"
@@ -88,7 +88,7 @@ console.log('projectName :>> ', props.projectName);
 		<Icon
 			name="docker"
 			aria-hidden="true"
-			class="w-3 h-3 absolute translate-y-[100vh] group-hover:-translate-y-full transition ease-in-out duration-300 bottom-[16%] left-[70%] blur-[2px]"
+			class="w-3 h-3 absolute translate-y-[100vh] group-hover:-translate-y-full transition ease-in-out duration-300 bottom-[22%] left-[70%] blur-[2px]"
 		/>
 		<Icon
 			name="element-tag"
@@ -215,7 +215,7 @@ console.log('projectName :>> ', props.projectName);
 		<Icon
 			name="javascript"
 			aria-hidden="true"
-			class="w-3 h-3 absolute translate-y-[100vh] group-hover:-translate-y-full transition ease-in-out duration-300 top-[16%] left-[93%] blur-[0px]"
+			class="w-3 h-3 absolute translate-y-[100vh] group-hover:-translate-y-full transition ease-in-out duration-300 top-[10%] left-[82%] blur-[0px]"
 		/>
 		<Icon
 			name="vue"
@@ -227,5 +227,11 @@ console.log('projectName :>> ', props.projectName);
 			aria-hidden="true"
 			class="w-6 h-6 absolute translate-y-[100vh] group-hover:-translate-y-full transition ease-in-out duration-75 top-[33%] left-[86%] blur-[1px]"
 		/>
+	</div>
+	<div
+		v-if="projectName === 'groove'"
+		class="absolute top-0 left-0 w-full h-full bg-red-500"
+	>
+		aye aye
 	</div>
 </template>
