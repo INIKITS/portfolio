@@ -57,7 +57,7 @@ onMounted(() => {
 
 <template>
 	<div data-element="hero-section" class="[ px-12 gap-2 min-h-[100vh] flex items-center justify-center ]">
-		<div class="[ relative text-3xl leading-relaxed tracking-wide text-white ]">
+		<div class="[ relative text-3xl leading-relaxed tracking-wide text-text-theme-primary ]">
 			hello. i'm
 			<span class="[ text-bg-theme ]">{{ typeValue }}</span>
 			<span class="[ animate-pulse font-mono ]">|</span>

@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './_portfolio-card.scss';
+
+body {
+	background-color: #000;
+}
