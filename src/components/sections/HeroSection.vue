@@ -23,8 +23,7 @@ function typeText() {
 		) {
 			typingSpeed.value = 85;
 			setTimeout(typeText, 1600);
-		} else
-		setTimeout(typeText, typingSpeed.value);
+		} else setTimeout(typeText, typingSpeed.value);
 	} else if (displayTextArrayIndex.value === displayText.length - 1) {
 		return;
 	} else {
@@ -56,8 +55,13 @@ onMounted(() => {
 </script>
 
 <template>
-	<div data-element="hero-section" class="[ px-12 gap-2 min-h-[100vh] flex items-center justify-center ]">
-		<div class="[ relative text-3xl leading-relaxed tracking-wide text-text-theme-primary ]">
+	<div
+		data-element="hero-section"
+		class="[ flex items-center justify-center gap-2 min-h-[100vh] px-12 ]"
+	>
+		<div
+			class="[ relative ] [ text-3xl leading-relaxed tracking-wide text-primary ]"
+		>
 			hello. i'm
 			<span class="[ text-bg-theme ]">{{ typeValue }}</span>
 			<span class="[ animate-pulse font-mono ]">|</span>
