@@ -39,7 +39,7 @@ const projects = [
 </script>
 <template>
 	<div data-element="portfolio-section" class="portfolio">
-		<div class="text-text-theme-primary text-center text-3xl text-cabin">
+		<div class="text-primary text-center text-3xl text-cabin">
 			Projects and Recent Work
 		</div>
 		<div class="[ flex pb-44 pt-24 flex-wrap ]">
