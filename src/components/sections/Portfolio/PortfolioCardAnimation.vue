@@ -1,14 +1,19 @@
 <script setup>
 import Icon from '@/components/Icon.vue';
-
+import { Vue3Lottie } from 'vue3-lottie';
+import coin from '@/assets/lottie/coin.json';
 const props = defineProps({
 	projectName: {
 		type: String,
 		required: true,
 	},
+	isHovered: {
+		type: Boolean,
+		required: true,
+	},
 });
 
-console.log('projectName :>> ', props.projectName);
+
 </script>
 
 <template>
@@ -229,9 +234,29 @@ console.log('projectName :>> ', props.projectName);
 		/>
 	</div>
 	<div
-		v-if="projectName === 'groove'"
-		class="absolute top-0 left-0 w-full h-full bg-red-500"
+		v-if="projectName === 'groove' && isHovered"
+		class="absolute top-0 left-0 w-full h-full"
 	>
-		aye aye
+		<Vue3Lottie
+			:animationData="coin"
+			:height="30"
+			:width="30"
+			class="absolute top-[30%] left-[6%]"
+			:class="{ 'coin-1': isHovered }"
+		/>
+		<Vue3Lottie
+			:animationData="coin"
+			:height="30"
+			:width="30"
+			class="absolute top-[30%] left-[28%]"
+			:class="{ 'coin-2': isHovered }"
+		/>
+		<Vue3Lottie
+			:animationData="coin"
+			:height="30"
+			:width="30"
+			class="absolute top-[30%] left-[54%]"
+			:class="{ 'coin-3': isHovered }"
+		/>
 	</div>
 </template>

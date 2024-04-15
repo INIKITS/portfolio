@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue';
 import PortfolioCardTag from './PortfolioCardTag.vue';
 import PortfolioCardAnimation from './PortfolioCardAnimation.vue';
 
@@ -8,13 +9,14 @@ const props = defineProps({
 		required: true,
 	},
 });
+
+const isHovered = ref(false);
 </script>
 <template>
 	<div
-		class="[ card relative flex-[0_0_306px]  text-black flex flex-col bg-[#0f1010] mx-auto border-2 border-black hover:border-2 hover:border-bg-theme-dark shadow-bg-theme-dark group transition duration-200 overflow-hidden ]"
-		:class="{
-			'hover:bg-[#EBE8CC]': project.name === 'chickasaw.tv',
-		}"
+		class="[ card relative flex-[0_0_306px] text-black flex flex-col bg-[#0f1010] mx-auto border-2 border-black hover:border-2 hover:border-bg-theme-dark shadow-bg-theme-dark group transition duration-200 overflow-hidden ]"
+		@mouseover="isHovered = true"
+		@mouseleave="isHovered = false"
 	>
 		<a target="_blank" :href="project.url" aria-label="View project">
 			<img
@@ -24,11 +26,11 @@ const props = defineProps({
 			/>
 		</a>
 		<div class="relative h-full p-4 flex flex-col">
-			<PortfolioCardAnimation :project-name="project.name" />
+			<PortfolioCardAnimation :project-name="project.name" :is-hovered="isHovered" />
 			<a
 				:href="project.url"
 				target="_blank"
-				class="z-10 text-xl pb-4 first-letter:uppercase font-bold text-white tracking-widest font-cabin"
+				class="z-10 w-fit text-xl pb-4 first-letter:uppercase font-bold text-white tracking-widest font-cabin"
 			>
 				{{ project.name }}
 			</a>
