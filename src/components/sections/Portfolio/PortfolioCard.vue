@@ -26,7 +26,10 @@ const isHovered = ref(false);
 			/>
 		</a>
 		<div class="relative h-full p-4 flex flex-col">
-			<PortfolioCardAnimation :project-name="project.name" :is-hovered="isHovered" />
+			<PortfolioCardAnimation
+				:project-name="project.name"
+				:is-hovered="isHovered"
+			/>
 			<a
 				:href="project.url"
 				target="_blank"

@@ -1,9 +1,11 @@
 <script setup>
+import { onMounted, onUnmounted, ref } from 'vue';
 import PortfolioCard from './PortfolioCard.vue';
 const props = defineProps({
 	name: String,
 	alt: String,
 });
+
 const projects = [
 	{
 		name: 'preducation',
@@ -36,11 +38,16 @@ const projects = [
 ];
 </script>
 <template>
-	<div class="[ flex pb-44 flex-wrap ]">
-		<PortfolioCard
-			v-for="project in projects"
-			:key="project.name"
-			:project="project"
-		/>
+	<div data-element="portfolio-section" class="portfolio">
+		<div class="text-text-theme-primary text-center text-3xl text-cabin">
+			Projects and Recent Work
+		</div>
+		<div class="[ flex pb-44 pt-24 flex-wrap ]">
+			<PortfolioCard
+				v-for="project in projects"
+				:key="project.name"
+				:project="project"
+			/>
+		</div>
 	</div>
 </template>
