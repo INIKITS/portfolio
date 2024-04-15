@@ -122,4 +122,35 @@
 			transform: translateY(0px);
 		}
 	}
+
+	.noise {
+		background-image: repeating-radial-gradient(
+			circle at 17% 32%,
+			white,
+			black 0.00085px
+		);
+		animation: back 5s linear infinite, noise 1s linear 1 alternate;
+	}
+
+	@keyframes noise {
+		0%,
+		100% {
+			opacity: 0.35;
+		}
+		50% {
+			opacity: 0.65;
+		}
+		75% {
+			opacity: 0.45;
+		}
+	}
+
+	@keyframes back {
+		from {
+			background-size: 100% 100%;
+		}
+		to {
+			background-size: 200% 200%;
+		}
+	}
 }

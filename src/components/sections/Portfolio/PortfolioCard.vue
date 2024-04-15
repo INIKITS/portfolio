@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import Icon from '@/components/Icon.vue';
 import PortfolioCardTag from './PortfolioCardTag.vue';
 import PortfolioCardAnimation from './PortfolioCardAnimation.vue';
 
@@ -18,11 +19,18 @@ const isHovered = ref(false);
 		@mouseover="isHovered = true"
 		@mouseleave="isHovered = false"
 	>
+		<div
+			v-if="project.name === 'chickasaw.tv'"
+			src="/src/assets/imgs/noise-2.png"
+			class="absolute z-10 top-0 left-0 w-full h-full opacity-35 pointer-events-none"
+			:class="{ noise: isHovered }"
+		/>
 		<a target="_blank" :href="project.url" aria-label="View project">
 			<img
 				:src="`/src/assets/imgs/${project.name}.png`"
 				:alt="project.name"
 				class="h-full min-h-[163px] object-center object-fit group-hover:brightness-100 brightness-75 transition duration-200"
+				:class="{ 'relative overflow-hidden': project.name === 'chickasaw.tv' }"
 			/>
 		</a>
 		<div class="relative h-full p-4 flex flex-col">
