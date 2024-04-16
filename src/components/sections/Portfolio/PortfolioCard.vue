@@ -37,14 +37,14 @@ onUnmounted(() => {
 	>
 		<div
 			v-if="project.name === 'chickasaw.tv'"
-			src="/src/assets/imgs/noise-2.png"
+			src="/assets/imgs/noise-2.png"
 			aria-hidden="true"
 			class="[ absolute z-10 top-0 left-0 w-full h-full ] [ opacity-35 pointer-events-none ]"
 			:class="{ noise: isHovered }"
 		/>
 		<a target="_blank" :href="project.url" aria-label="View project">
 			<img
-				:src="`/src/assets/imgs/${project.name}.png`"
+				:src="`/assets/imgs/${project.name}.png`"
 				:alt="project.name"
 				class="[ h-full min-h-[163px] object-center object-fit ] [ group-hover:brightness-100 brightness-75 transition duration-200 ]"
 				:class="{
