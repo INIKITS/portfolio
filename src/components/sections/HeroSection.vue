@@ -81,7 +81,7 @@ onUnmounted(() => {
 		/>
 		<div
 			ref="heroText"
-			class="[ md:max-w-[55%] text-center lg:text-left mx-auto ]"
+			class="[ max-w-[65%] lg:max-w-[40%] text-center lg:text-left mx-auto ]"
 			:class="{ 'fade-in': isVisible }"
 		>
 			<div
@@ -94,10 +94,7 @@ onUnmounted(() => {
 			<div class="text-primary md:text-xl leading-relaxed">
 				I am a
 				<span class="text-bg-theme font-bold">Front End Developer</span>
-				who enjoys building things for both the web and people.
-			</div>
-			<div class="mt-3 text-primary md:text-xl leading-relaxed">
-				I specialize in creating pixel-perfect websites and applications
+				who specializes in creating pixel-perfect websites and applications
 				with a focus on creating a seamless user experience.
 			</div>
 		</div>
