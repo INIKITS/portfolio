@@ -1,0 +1,27 @@
+nav {
+	.divider-gradient-right {
+		background: linear-gradient(
+			90deg,
+			#28bfe5 0%,
+			#e023b4 50%,
+			#7a24d6 75%,
+			#28bfe5 100%
+		);
+		animation: divider-animation 2s ease-in-out infinite alternate;
+		background-size: 200%;
+	}
+	.divider-gradient-left {
+		background: linear-gradient(90deg, #7a24d6 0%, #28bfe5 50%, #e023b4 100%);
+		animation: divider-animation 2s ease-in-out infinite alternate;
+		background-size: 200%;
+	}
+
+	@keyframes divider-animation {
+		0% {
+			background-position: left;
+		}
+		100% {
+			background-position: right;
+		}
+	}
+}
