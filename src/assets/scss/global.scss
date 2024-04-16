@@ -2,8 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './_portfolio-card.scss';
+@import "./nav.scss";
+@import "./_portfolio-section.scss";
+@import "./hero-section.scss";
 
 body {
-	background-color: #000;
+	background-color: #0e161a;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

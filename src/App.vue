@@ -1,12 +1,11 @@
 <script setup>
-import HomePage from '@/pages/HomePage.vue'
-import MainNav from '@/components/sections/Nav/MainNav.vue';
-
+import HomePage from "@/pages/HomePage.vue";
+import MainNav from "@/components/sections/Nav/MainNav.vue";
 </script>
 
 <template>
-  <MainNav /> 
-  <main>
-      <HomePage />
-  </main>
+	<MainNav />
+	<main class="relative overflow-hidden">
+		<HomePage />
+	</main>
 </template>
