@@ -56,7 +56,7 @@ onUnmounted(() => {
 });
 </script>
 <template>
-	<div data-element="portfolio-section" class="[ relative overflow-hidden ]">
+	<div data-element="portfolio-section">
 		<div
 			ref="portfolioSectionText"
 			class="[ mx-4 text-primary text-center text-3xl text-cabin ]"
