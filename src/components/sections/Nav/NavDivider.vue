@@ -10,17 +10,11 @@ const props = defineProps({
 <template>
 	<div
 		data-element="nav-divider"
-		class="
-			[ absolute h-px w-[44%] top-full left-1/2 ]
-			[ bg-white transition-all duration-500 ]
-		"
-		:class="{ 'w-[50%] bg-bg-theme-dark': solidNav }"
+		class="[ absolute h-px w-[44%] top-full left-1/2 ] [ transition-all duration-500 divider-gradient-right ]"
+		:class="{ 'w-[50%] opacity-35': solidNav }"
 	/>
 	<div
-		class="
-			[ absolute h-px w-[44%] top-full right-1/2 ]
-			[ bg-white transition-all duration-500 ]
-		"
-		:class="{ 'w-[50%] bg-bg-theme-dark': solidNav }"
+		class="[ absolute h-px w-[44%] top-full right-1/2 ] [ transition-all duration-500 divider-gradient-left ]"
+		:class="{ 'w-[50%] opacity-35': solidNav }"
 	/>
 </template>

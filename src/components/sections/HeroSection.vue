@@ -1,8 +1,10 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from "vue";
+import { useElementInView } from "@/composables/useElementInView.js";
 
-const displayText = ['dakopa', 'dakoaa', 'dakota. 🦅'];
-const typeValue = ref('');
+const heroText = ref(null);
+const displayText = ["dakopa", "dakoaa", "dakota. 🦅"];
+const typeValue = ref("");
 const typeStatus = ref(false);
 const typingSpeed = ref(100);
 const erasingSpeed = 75;
@@ -10,11 +12,16 @@ const newTextDelay = 1200;
 const displayTextArrayIndex = ref(0);
 const charIndex = ref(0);
 
+const { isVisible, observer } = useElementInView(() => {}, {
+	threshold: 0,
+	rootMargin: "20%",
+});
+
 function typeText() {
 	if (charIndex.value < displayText[displayTextArrayIndex.value].length) {
 		if (!typeStatus) typeStatus.value = true;
 		typeValue.value += displayText[displayTextArrayIndex.value].charAt(
-			charIndex.value
+			charIndex.value,
 		);
 		charIndex.value += 1;
 		if (
@@ -31,12 +38,13 @@ function typeText() {
 		setTimeout(eraseText, newTextDelay);
 	}
 }
+
 function eraseText() {
 	if (charIndex.value > 0) {
 		if (!typeStatus.value) typeStatus.value = true;
 		typeValue.value = displayText[displayTextArrayIndex.value].substring(
 			0,
-			charIndex.value - 1
+			charIndex.value - 1,
 		);
 		charIndex.value -= 1;
 		setTimeout(eraseText, erasingSpeed);
@@ -51,16 +59,29 @@ function eraseText() {
 
 onMounted(() => {
 	setTimeout(typeText, newTextDelay + 200);
+	observer.observe(heroText.value);
+});
+
+onUnmounted(() => {
+	observer.disconnect();
 });
 </script>
 
 <template>
 	<div
 		data-element="hero-section"
-		class="[ flex items-center justify-center gap-2 min-h-[100vh] px-12 ]"
+		class="[ flex flex-col justify-center text-center min-h-[100vh] px-12 mb-12 ]"
 	>
 		<div
-			class="[ relative ] [ text-3xl leading-relaxed tracking-wide text-primary ]"
+			class="[ absolute -left-24 top-[33%] w-60 h-60 rounded-full bg-[#03656c] blur-[100px] ]"
+		/>
+		<div
+			class="[ absolute -right-24 top-[10%] w-60 h-60 rounded-full bg-[#542676] blur-[100px] ]"
+		/>
+		<div
+			ref="heroText"
+			class="[ text-3xl leading-relaxed tracking-wide text-primary z-10 ]"
+			:class="{ 'fade-in': isVisible }"
 		>
 			hello. i'm
 			<span class="[ text-bg-theme ]">{{ typeValue }}</span>

@@ -1,7 +1,16 @@
 <script setup>
-import { ref } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
+import { useElementInView } from '@/composables/useElementInView.js';
 import PortfolioCardTag from './PortfolioCardTag.vue';
 import PortfolioCardAnimation from './PortfolioCardAnimation.vue';
+
+const isHovered = ref(false);
+const portfolioCard = ref(null);
+
+const { isVisible, observer } = useElementInView(() => {}, {
+	threshold: 0.4,
+	rootMargin: '30%',
+});
 
 const props = defineProps({
 	project: {
@@ -10,16 +19,19 @@ const props = defineProps({
 	},
 });
 
-const isHovered = ref(false);
+onMounted(() => {
+	observer.observe(portfolioCard.value);
+});
+
+onUnmounted(() => {
+	observer.disconnect();
+});
 </script>
 <template>
 	<div
-		class="
-			card
-			[ flex flex-col flex-[0_0_306px] relative mx-auto overflow-hidden ]
-			[ text-black bg-[#0f1010] border-2 border-black hover:border-bg-theme-dark ]
-			[ group transition duration-200 ]
-		"
+		ref="portfolioCard"
+		class="card [ flex flex-col flex-[0_0_306px] relative mx-4 mb-12 overflow-hidden ] [ text-black bg-[#0f1010] border-2 border-transparent hover:border-bg-theme-dark backdrop-blur-sm ] [ group transition duration-200 ]"
+		:class="{ 'fade-in': isVisible }"
 		@mouseover="isHovered = true"
 		@mouseleave="isHovered = false"
 	>
