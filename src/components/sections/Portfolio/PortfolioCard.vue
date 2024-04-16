@@ -46,7 +46,7 @@ onUnmounted(() => {
 			<img
 				:src="`/assets/imgs/${project.name}.png`"
 				:alt="project.name"
-				class="[ h-full min-h-[163px] object-center object-fit ] [ group-hover:brightness-100 brightness-75 transition duration-200 ]"
+				class="[ h-full md:min-h-[163px] object-center object-fit ] [ group-hover:brightness-100 brightness-75 transition duration-200 ]"
 				:class="{
 					'[ relative overflow-hidden ]': project.name === 'chickasaw.tv',
 				}"
