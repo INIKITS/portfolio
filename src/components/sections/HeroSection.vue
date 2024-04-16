@@ -81,7 +81,7 @@ onUnmounted(() => {
 		/>
 		<div
 			ref="heroText"
-			class="[ max-w-[65%] lg:max-w-[40%] text-center lg:text-left mx-auto ]"
+			class="[ md:max-w-[65%] lg:max-w-[40%] text-center lg:text-left mx-auto ]"
 			:class="{ 'fade-in': isVisible }"
 		>
 			<div
