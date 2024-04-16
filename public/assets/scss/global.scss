@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "./nav.scss";
-@import "./_portfolio-section.scss";
-@import "./hero-section.scss";
+@import './nav.scss';
+@import './_portfolio-section.scss';
+@import './hero-section.scss';
 
 body {
 	background-color: #0e161a;

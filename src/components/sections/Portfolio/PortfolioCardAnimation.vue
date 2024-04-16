@@ -1,7 +1,7 @@
 <script setup>
-import Icon from "@/components/Icon.vue";
-import { Vue3Lottie } from "vue3-lottie";
-import coin from "@/assets/lottie/coin.json";
+import Icon from '@/components/Icon.vue'
+import { Vue3Lottie } from 'vue3-lottie'
+import coin from '@/assets/lottie/coin.json'
 const props = defineProps({
 	projectName: {
 		type: String,
@@ -11,7 +11,7 @@ const props = defineProps({
 		type: Boolean,
 		required: true,
 	},
-});
+})
 </script>
 
 <template>

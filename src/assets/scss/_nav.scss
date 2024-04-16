@@ -11,7 +11,12 @@ nav {
 		background-size: 200%;
 	}
 	.divider-gradient-left {
-		background: linear-gradient(90deg, #7a24d6 0%, #28bfe5 50%, #e023b4 100%);
+		background: linear-gradient(
+			90deg,
+			#7a24d6 0%,
+			#28bfe5 50%,
+			#e023b4 100%
+		);
 		animation: divider-animation 2s ease-in-out infinite alternate;
 		background-size: 200%;
 	}

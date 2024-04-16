@@ -1,5 +1,5 @@
 <script setup>
-import Icon from '@/components/Icon.vue';
+import Icon from '@/components/Icon.vue'
 
 const props = defineProps({
 	icon: {
@@ -10,7 +10,7 @@ const props = defineProps({
 		type: String,
 		required: true,
 	},
-});
+})
 </script>
 
 <template>

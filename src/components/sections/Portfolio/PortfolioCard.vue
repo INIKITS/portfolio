@@ -1,36 +1,36 @@
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue';
-import { useElementInView } from '@/composables/useElementInView.js';
-import PortfolioCardTag from './PortfolioCardTag.vue';
-import PortfolioCardAnimation from './PortfolioCardAnimation.vue';
+import { onMounted, onUnmounted, ref } from 'vue'
+import { useElementInView } from '@/composables/useElementInView.js'
+import PortfolioCardTag from './PortfolioCardTag.vue'
+import PortfolioCardAnimation from './PortfolioCardAnimation.vue'
 
-const isHovered = ref(false);
-const portfolioCard = ref(null);
+const isHovered = ref(false)
+const portfolioCard = ref(null)
 
 const { isVisible, observer } = useElementInView(() => {}, {
-	threshold: 0.4,
+	threshold: 0.5,
 	rootMargin: '30%',
-});
+})
 
 const props = defineProps({
 	project: {
 		type: Object,
 		required: true,
 	},
-});
+})
 
 onMounted(() => {
-	observer.observe(portfolioCard.value);
-});
+	observer.observe(portfolioCard.value)
+})
 
 onUnmounted(() => {
-	observer.disconnect();
-});
+	observer.disconnect()
+})
 </script>
 <template>
 	<div
 		ref="portfolioCard"
-		class="card [ flex flex-col flex-[0_0_306px] relative mx-4 mb-12 overflow-hidden ] [ text-black bg-[#0f1010] border-2 border-transparent hover:border-bg-theme-dark backdrop-blur-md ] [ group transition duration-200 ]"
+		class="card [ flex flex-col flex-[0_1_306px] relative mx-4 mb-12 overflow-hidden ] [ text-black bg-[#0f1010]/45 border-2 border-[#1c1c1c] backdrop-blur-md z-10 ] [ group transition duration-200 ]"
 		:class="{ 'fade-in': isVisible }"
 		@mouseover="isHovered = true"
 		@mouseleave="isHovered = false"
@@ -48,7 +48,8 @@ onUnmounted(() => {
 				:alt="project.name"
 				class="[ md:min-h-[163px] object-center object-cover ] [ group-hover:brightness-100 brightness-75 transition duration-200 ]"
 				:class="{
-					'[ relative overflow-hidden ]': project.name === 'chickasaw.tv',
+					'[ relative overflow-hidden ]':
+						project.name === 'chickasaw.tv',
 				}"
 			/>
 		</a>
@@ -65,11 +66,17 @@ onUnmounted(() => {
 				{{ project.name }}
 			</a>
 			<div class="[ pb-4 flex flex-wrap gap-4 ]">
-				<PortfolioCardTag v-for="tag in project.tags" :key="tag" :name="tag" />
+				<PortfolioCardTag
+					v-for="tag in project.tags"
+					:key="tag"
+					:name="tag"
+				/>
 			</div>
 			<div
 				class="[ z-0 overflow-visible ] [ text-primary text-sm ] [ transition duration-200 ]"
-				:class="{ 'group-hover:bg-[#0f1010]/60': project.name === 'clevyr' }"
+				:class="{
+					'group-hover:bg-[#0f1010]/60': project.name === 'clevyr',
+				}"
 			>
 				{{ project.description }}
 			</div>

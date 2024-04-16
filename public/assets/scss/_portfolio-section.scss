@@ -155,7 +155,9 @@
 				white,
 				black 0.00085px
 			);
-			animation: back 5s linear infinite, noise 1s linear 1 alternate;
+			animation:
+				back 5s linear infinite,
+				noise 1s linear 1 alternate;
 		}
 
 		@keyframes noise {
