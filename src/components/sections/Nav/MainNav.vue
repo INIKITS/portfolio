@@ -30,8 +30,8 @@ onUnmounted(() => {
 		<NavDivider :solidNav="solidNav" />
 		<ul
 			data-element="nav-list"
-			class="[ flex gap-8 mr-28 ] [ transition-all duration-500 ]"
-			:class="{ 'translate-x-[80%]': solidNav }"
+			class="[ flex gap-8 mr-8 md:mr-28 ] [ transition-all duration-500 ]"
+			:class="{ 'translate-x-[20%] md:translate-x-[80%]': solidNav }"
 		>
 			<NavItem
 				icon="linkedin"
