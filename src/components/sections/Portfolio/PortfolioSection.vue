@@ -56,10 +56,10 @@ onUnmounted(() => {
 });
 </script>
 <template>
-	<div data-element="portfolio-section">
+	<div data-element="portfolio-section" class="mx-4">
 		<div
 			ref="portfolioSectionText"
-			class="[ mx-4 text-primary text-center text-3xl text-cabin ]"
+			class="[ text-primary text-center text-3xl text-cabin ]"
 			:class="{ 'fade-in': isVisible }"
 		>
 			Projects and Recent Work

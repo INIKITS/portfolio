@@ -30,7 +30,7 @@ onUnmounted(() => {
 <template>
 	<div
 		ref="portfolioCard"
-		class="card [ flex flex-col flex-[0_0_306px] relative mx-4 mb-12 overflow-hidden ] [ text-black bg-[#0f1010] border-2 border-transparent hover:border-bg-theme-dark backdrop-blur-sm ] [ group transition duration-200 ]"
+		class="card [ flex flex-col flex-[0_0_306px] relative mx-4 mb-12 overflow-hidden ] [ text-black bg-[#0f1010] border-2 border-transparent hover:border-bg-theme-dark backdrop-blur-md ] [ group transition duration-200 ]"
 		:class="{ 'fade-in': isVisible }"
 		@mouseover="isHovered = true"
 		@mouseleave="isHovered = false"
@@ -46,7 +46,7 @@ onUnmounted(() => {
 			<img
 				:src="`/assets/imgs/${project.name}.png`"
 				:alt="project.name"
-				class="[ h-full md:min-h-[163px] object-center object-fit ] [ group-hover:brightness-100 brightness-75 transition duration-200 ]"
+				class="[ md:min-h-[163px] object-center object-cover ] [ group-hover:brightness-100 brightness-75 transition duration-200 ]"
 				:class="{
 					'[ relative overflow-hidden ]': project.name === 'chickasaw.tv',
 				}"
