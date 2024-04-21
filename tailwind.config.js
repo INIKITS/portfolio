@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const hocusPlugin = require('tailwindcss-hocus')
 export default {
 	content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
 	theme: {
@@ -17,5 +18,5 @@ export default {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [hocusPlugin],
 }

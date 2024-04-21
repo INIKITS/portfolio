@@ -17,7 +17,7 @@ const props = defineProps({
 	<li data-element="nav-item">
 		<a
 			:href="url"
-			class="[ fill-primary hover:fill-text-theme-secondary hover:animate-pulse transition-all duration-300 ]"
+			class="[ fill-primary hocus:fill-text-theme-secondary hocus:animate-pulse transition-all duration-300 ]"
 		>
 			<Icon :name="icon" width="30" />
 		</a>
