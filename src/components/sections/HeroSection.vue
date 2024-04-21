@@ -74,9 +74,11 @@ onUnmounted(() => {
 		class="[ flex flex-col lg:flex-row lg:justify-between items-center min-h-[100vh] mt-36 lg:mt-4 mb-12 mx-10 ]"
 	>
 		<div
+			aria-hidden="true"
 			class="[ absolute -left-24 top-[33%] w-60 h-60 rounded-full bg-[#03656c] blur-[100px] ]"
 		/>
 		<div
+			aria-hidden="true"
 			class="[ absolute -right-24 top-[10%] w-60 h-60 rounded-full bg-[#542676] blur-[100px] ]"
 		/>
 		<div
@@ -91,21 +93,21 @@ onUnmounted(() => {
 				<span>{{ typeValue }}</span>
 				<span class="[ animate-pulse font-mono ]">|</span>
 			</div>
-			<div class="text-primary md:text-xl leading-relaxed">
+			<div class="[ text-primary md:text-xl leading-relaxed ]">
 				I am a
-				<span class="text-bg-theme font-bold">Front End Developer</span>
+				<span class="[ text-bg-theme font-bold ]">Front End Developer</span>
 				who specializes in creating pixel-perfect websites and applications
 				with a focus on creating a seamless user experience.
 			</div>
 		</div>
 		<div
-			class="mt-12 bg-[#0f1010]/45 backdrop-blur-sm p-3 rounded-full mx-auto"
+			class="[ mt-12 bg-[#0f1010]/45 backdrop-blur-sm p-3 rounded-full mx-auto ]"
 			:class="{ 'fade-in': isVisible }"
 		>
 			<img
 				src="/assets/imgs/me.png"
 				aria-hidden="true"
-				class="w-[17rem] h-[17rem] lg:w-[26rem] lg:h-[26rem] z-20 rounded-full object-cover object-bottom brightness-[0.80] contrast-[1.06]"
+				class="[ w-[17rem] h-[17rem] lg:w-[26rem] lg:h-[26rem] z-20 rounded-full object-cover object-bottom brightness-[0.80] contrast-[1.06] ]"
 			/>
 		</div>
 	</div>

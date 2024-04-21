@@ -74,6 +74,7 @@ onUnmounted(() => {
 			/>
 		</div>
 		<div
+			aria-hidden="true"
 			class="[ absolute -right-24 bottom-0 w-60 h-60 rounded-full ] [ bg-[#542676] blur-[100px] ]"
 		/>
 	</div>
