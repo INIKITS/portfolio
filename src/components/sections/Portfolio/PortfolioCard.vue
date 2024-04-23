@@ -42,7 +42,7 @@ onUnmounted(() => {
 			v-if="project.name === 'chickasaw.tv'"
 			src="/assets/imgs/noise-2.png"
 			aria-hidden="true"
-			class="[ absolute z-10 top-0 left-0 w-full h-full ] [ opacity-35 pointer-events-none ]"
+			class="[ absolute z-10 top-0 left-0 w-full h-full ] [ opacity-20 pointer-events-none ]"
 			:class="{ noise: isHovered }"
 		/>
 		<a target="_blank" :href="project.url" aria-label="View Project">
