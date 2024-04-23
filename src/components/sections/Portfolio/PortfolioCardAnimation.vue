@@ -27,7 +27,7 @@ const props = defineProps({
 		aria-hidden="true"
 		class="[ absolute -bottom-2 -left-[22%] w-14 h-14 z-10 ] [ group-hocus-within:translate-x-[450%] transition duration-500 ]"
 	/>
-	<div v-if="projectName === 'clevyr'" class="stroke-[#FF5900]">
+	<div v-if="projectName === 'clevyr'" class="stroke-[#FF5900] opacity-75">
 		<Icon
 			name="binary"
 			aria-hidden="true"
@@ -129,7 +129,7 @@ const props = defineProps({
 			class="[ w-6 h-6 absolute bottom-[33%] left-[86%] translate-y-[100vh] ] [ group-hocus-within:-translate-y-full transition ease-in-out ] [ duration-150 blur-[1px] ]"
 		/>
 	</div>
-	<div v-if="projectName === 'clevyr'" class="stroke-[#FF5900]">
+	<div v-if="projectName === 'clevyr'" class="stroke-[#FF5900] opacity-75">
 		<Icon
 			name="binary"
 			aria-hidden="true"
@@ -138,7 +138,7 @@ const props = defineProps({
 		<Icon
 			name="element-tag"
 			aria-hidden="true"
-			class="[ w-5 h-5 absolute top-12 left-[10%] translate-y-[100vh] ] [ group-hocus-within:-translate-y-full transition ease-in-out ] [ duration-100 ]"
+			class="[ w-4 h-4 absolute top-6 left-[4%] translate-y-[100vh] ] [ group-hocus-within:-translate-y-full transition ease-in-out ] [ duration-100 ]"
 		/>
 		<Icon
 			name="docker"
