@@ -136,7 +136,7 @@ const props = defineProps({
 			class="[ w-6 h-6 absolute top-[37%] left-0 translate-y-[100vh] ] [ group-hocus-within:-translate-y-full transition ease-in-out ] [ duration-200 blur-[1px] ]"
 		/>
 		<Icon
-			name="element-tag"
+			name="element-tag test"
 			aria-hidden="true"
 			class="[ w-4 h-4 absolute top-6 left-[4%] translate-y-[100vh] ] [ group-hocus-within:-translate-y-full transition ease-in-out ] [ duration-100 ]"
 		/>
